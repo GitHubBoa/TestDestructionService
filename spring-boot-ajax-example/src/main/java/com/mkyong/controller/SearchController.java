@@ -29,6 +29,8 @@ public class SearchController {
     public ResponseEntity<?> getSearchResultViaAjax(@Valid @RequestBody SearchCriteria search, Errors errors) {
 
         AjaxResponseBody result = new AjaxResponseBody();
+        
+        System.out.println("Hello this is for testing..");
 
         //If error, just return a 400 bad request, along with the error message
         if (errors.hasErrors()) {
